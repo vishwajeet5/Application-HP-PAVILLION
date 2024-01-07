@@ -10,7 +10,7 @@ public class frog_jump{
     return Math.min(op1, op2);
     }
     public static void main(String[] args) {
-        int [] h = {10,30,40,20};
+        int [] h = {10,30,40,20,60,20,70};
         System.out.println(best(h, h.length, 0));
     }
 }
