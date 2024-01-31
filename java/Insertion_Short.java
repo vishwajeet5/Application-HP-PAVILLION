@@ -4,7 +4,7 @@ public class Insertion_Short {
 
         for (int i = 1; i < n; i++) {
             int j = i;
-            while (j > 0 && a[j] == a[j - 1]) {
+            while (j > 0 && a[j] < a[j - 1]) {
                 int temp = a[j];
                 a[j] = a[j - 1];
                 a[j - 1] = temp;
