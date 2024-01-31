@@ -12,11 +12,12 @@ public class multiples{
     System.out.println(n * m);
 }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("enter the no. which you want the multiple - ");
-        int n = sc.nextInt();
-        System.out.print("enter the no. till where you want the multiple - ");
-        int m = sc.nextInt();
-        printmultiples(n, m);
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("enter the no. which you want the multiple - ");
+            int n = sc.nextInt();
+            System.out.print("enter the no. till where you want the multiple - ");
+            int m = sc.nextInt();
+            printmultiples(n, m);
+        }
     }
 }

@@ -18,13 +18,14 @@ public class GCD {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the no. for GCD");
-        System.out.print("First no. - ");
-        int x = sc.nextInt();
-        System.out.print("Second no. - ");
-        int y = sc.nextInt();
-        System.out.println(iGCD(x, y));
-        System.out.println(GCD(x, y));
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter the no. for GCD");
+            System.out.print("First no. - ");
+            int x = sc.nextInt();
+            System.out.print("Second no. - ");
+            int y = sc.nextInt();
+            System.out.println(iGCD(x, y));
+            System.out.println(GCD(x, y));
+        }
     }
 }
