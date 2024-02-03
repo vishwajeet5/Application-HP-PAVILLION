@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
-public class seriesSum {
-    static int seriessum(int n){
+public class seriessum {
+    static int seriesSum(int n){
     if (n == 0)
     return 0;
     
     if (n % 2 == 0){
-    return seriessum(n - 1) - n;}
+    return seriesSum(n - 1) - n;}
     else{ 
-    return seriessum(n - 1) + n;
+    return seriesSum(n - 1) + n;
     }
 
 }
@@ -16,7 +16,7 @@ public class seriesSum {
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
             int n = sc.nextInt();
-            System.out.println(seriessum(n));
+            System.out.println(seriesSum(n));
         }
     }
 }
