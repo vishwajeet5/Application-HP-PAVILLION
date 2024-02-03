@@ -10,10 +10,10 @@ public class GCD {
         return y;
     }
 
-    static int GCD(int x, int y) {
+    static int gcd(int x, int y) {
         if (y == 0)
             return x;
-        return GCD(y, x % y);
+        return gcd(y, x % y);
 
     }
 
@@ -25,7 +25,7 @@ public class GCD {
             System.out.print("Second no. - ");
             int y = sc.nextInt();
             System.out.println(iGCD(x, y));
-            System.out.println(GCD(x, y));
+            System.out.println(gcd(x, y));
         }
     }
 }
