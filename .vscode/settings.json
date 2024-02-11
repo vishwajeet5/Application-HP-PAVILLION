@@ -1,5 +1,6 @@
 {
     "C_Cpp.errorSquiggles": "Disabled",
     "C_Cpp.default.compilerPath": "C:\\MinGW\\bin\\gcc.exe",
-    "python.analysis.typeCheckingMode": "basic"
+    "python.analysis.typeCheckingMode": "basic",
+    "CodeGPT.apiKey": "CodeGPT Plus Beta"
 }
