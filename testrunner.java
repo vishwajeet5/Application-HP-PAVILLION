@@ -25,7 +25,7 @@ public class testrunner {
     }*/
 
     // @SuppressWarnings("resource")
-    public static void main (String arg[]){
+    public static void main (String[] args){
         try (// @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in)) {
             int N = sc.nextInt();
@@ -47,8 +47,6 @@ public class testrunner {
             int result = Integer.parseInt(st.toString(),2);
 
             System.out.println(result);
-        } catch (NumberFormatException e) {
-            e.printStackTrace();
         }
 
     }
