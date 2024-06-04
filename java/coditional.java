@@ -23,6 +23,6 @@ public class coditional {
             output = (num % 2 == 0) ? "even" : "odd" ;
             System.out.println(output);
         
-         
+         sc.close();
     }
 }
