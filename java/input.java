@@ -9,6 +9,6 @@ public class input {
 
             System.out.println("String value: " + i);
             System.out.println("Line value: " + a);
-        sc.close();
+            sc.close();
     }
 }

@@ -3,7 +3,7 @@ import java.util.*;
 
 public class input {
      public static void main(String [] arg ){
-        @SuppressWarnings("resource")
+
         Scanner sc = new Scanner(System.in);
         // takes input of first digit
         int a = sc.nextInt();
@@ -13,7 +13,7 @@ public class input {
         System.out.println(a-b);
         System.out.println(a*b);
         System.out.println((float)(a/b));
-        
+        sc.close();
 
     }
 }
