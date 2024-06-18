@@ -6,8 +6,9 @@ public class SnakeGame extends JFrame {
         super("Snake Game");
         add(new Board());
         pack();
-        setSize(300, 300);
+        
         setLocationRelativeTo(null);
+        setResizable(false);
 
         setVisible(true);
 

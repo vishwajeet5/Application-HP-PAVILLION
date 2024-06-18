@@ -23,6 +23,8 @@ public class Board extends JPanel implements ActionListener {
     private boolean rightDirection = true;
     private boolean leftDirection = false;
 
+    private boolean inGame = true;
+
     private int dots;
     private Timer timer;
 
@@ -31,6 +33,7 @@ public class Board extends JPanel implements ActionListener {
         addKeyListener(new TAdapter());
 
         setBackground(Color.BLACK);
+        setPreferredSize(new Dimension(300,300));
         setFocusable(true);
 
         loadImages();
@@ -80,6 +83,7 @@ public class Board extends JPanel implements ActionListener {
 
     public void draw(Graphics g) {
 
+    if(inGame){
         g.drawImage(apple, apple_x, apple_y, this);
 
         for (int i = 0; i < dots; i++) {
@@ -92,6 +96,19 @@ public class Board extends JPanel implements ActionListener {
 
         Toolkit.getDefaultToolkit().sync();
 
+    }else{
+        gameOver(g);
+    }
+    }
+    public void gameOver(Graphics g){
+        String msg = "Game Over!";
+        Font font = new Font("SAN-SERIF",Font.BOLD, 14);
+        FontMetrics metrics = getFontMetrics(font);
+
+        g.setColor(Color.WHITE);
+        g.setFont(font);
+
+        g.drawString(msg,(300 - metrics.stringWidth(msg)) / 2, 300/2);
     }
 
     public void move() {
@@ -118,8 +135,44 @@ public class Board extends JPanel implements ActionListener {
 
     }
 
+    public void checkApple(){
+        if((x[0] == apple_x) && (y[0] == apple_y)){
+            dots++;
+            locateapple();
+        }
+    }
+
+    public void checkCollision(){
+        for (int i = dots; i > 0; i--){
+            if((i> 4) &&(x[0] == x[i] && y[0] == y[i])){
+                inGame = false;
+            } 
+        }
+        if (y[0] >= 300){
+            inGame = false;
+        }
+        if (x[0] >= 300){
+            inGame = false;
+        }
+        if (y[0] < 0){
+            inGame = false;
+        }
+        if (x[0] < 0){
+            inGame = false;
+        }
+
+        if(!inGame){
+            timer.stop();
+        }
+    }
     public void actionPerformed(ActionEvent e) {
+        if(inGame){
+        checkCollision();
+
+        checkApple();
+
         move();
+        }
 
         repaint();
     }
