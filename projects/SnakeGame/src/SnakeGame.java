@@ -14,7 +14,7 @@ public class SnakeGame extends JFrame {
 
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main (String[] args) throws Exception {
         new SnakeGame().setResizable(false);
 
     }
