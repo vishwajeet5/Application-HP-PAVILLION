@@ -8,14 +8,14 @@ public class SnakeGame extends JFrame {
         pack();
         
         setLocationRelativeTo(null);
-        setResizable(false);
+        
 
         setVisible(true);
 
     }
 
     public static void main(String[] args) throws Exception {
-        new SnakeGame();
+        new SnakeGame().setResizable(false);
 
     }
 }
