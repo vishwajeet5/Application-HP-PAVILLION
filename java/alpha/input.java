@@ -1,4 +1,3 @@
-// package alpha;
 import java.util.*;
 
 public class input {
