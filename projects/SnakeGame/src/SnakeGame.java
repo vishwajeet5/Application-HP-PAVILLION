@@ -9,7 +9,6 @@ public class SnakeGame extends JFrame {
         
         setLocationRelativeTo(null);
         
-
         setVisible(true);
 
     }
