@@ -2,7 +2,7 @@ import java.util.*;
 
 public class moreException17 {
 
-    public static void powerCalc(int n, int p){
+    public static void powerCalc(int n, int p){ 
         System.out.println((int)(Math.pow(n, p)));
     }
     public static void main(String[] args){
