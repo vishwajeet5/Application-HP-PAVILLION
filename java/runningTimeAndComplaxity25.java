@@ -11,7 +11,8 @@ public class runningTimeAndComplaxity25 {
             if (m == 1){
                 System.out.println("Not prime");
             }else{
-                for(int j = 2; j < m; j++){
+                // for(int j = 2; j < m; j++){                      not optimized
+                    for(int j = 2; j <= Math.sqrt(m); j++){         //optimized
                     if(m%j == 0){
                         c ++;
                     }
