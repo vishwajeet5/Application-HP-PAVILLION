@@ -2,10 +2,28 @@ import java.util.*;
 
 public class moreLinkedList24 {
     public static void main(String[] args){
-        int[] arr = {1, 2, 2, 3, 3, 4};
-        for(int i = 0; i < arr.length; i++){
-
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        // int[] arr = {1, 2, 2, 3, 3, 4};
+        int[] arr = new int[a];
+        for(int i = 0; i < a; i++){
+            arr[i] = sc.nextInt();
         }
+        for(int i = 0; i < arr.length; i++){
+            for(int j = i+1; j < arr.length; j++){
+                if(arr[i] == arr[j]){
+                    arr[j] = 0;
+                }
+            }
+        }
+        Arrays.sort(arr);
+        Arrays.toString(arr);
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] != 0){
+        System.out.println(arr[i]);
+            }
+        }
+        sc.close();
     }
 }
 
