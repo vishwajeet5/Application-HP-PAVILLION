@@ -44,11 +44,13 @@ static class TestDataEmptyArray{
 	public static void TestWithEmptyArray() {
         try {
             int[] seq = TestDataEmptyArray.get_array();
+            @SuppressWarnings("unused")
             int result = minimum_index(seq);
         } catch (IllegalArgumentException e) {
             return;
         }
         throw new AssertionError("Exception wasn't thrown as expected");
+        
     }
 
     public static void TestWithUniqueValues() {
