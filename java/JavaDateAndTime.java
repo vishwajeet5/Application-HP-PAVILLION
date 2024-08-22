@@ -1,16 +1,6 @@
 import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
-import java.time.LocalDate;
-import java.time.DayOfWeek;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.function.*;
-import java.util.regex.*;
-import java.util.stream.*;
-import static java.util.stream.Collectors.joining;
-import static java.util.stream.Collectors.toList;
+
 
 class Result {
 
@@ -24,35 +14,26 @@ class Result {
      *  3. INTEGER year
      */
 
-    public static String findDay(int month, int day, int year) {
+    public static String findDay(int month, int date, int year) {
         // my code
         Calendar cal = Calendar.getInstance();
         cal.set(Calendar.MONTH, month-1);
-        cal.set(Calendar.DAY_OF_MONTH, day);
+        cal.set(Calendar.DAY_OF_MONTH, date);
         cal.set(Calendar.YEAR, year);
         return cal.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.US).toUpperCase();
     }
 
 }
 public class JavaDateAndTime {
-    public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter in the format of dd mm yyyy");
+        int date = sc.nextInt();
+        int month = sc.nextInt();
+        int year = sc.nextInt();
 
-        String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
+        // findDay(month, date, year);
+    } 
 
-        int month = Integer.parseInt(firstMultipleInput[0]);
-
-        int day = Integer.parseInt(firstMultipleInput[1]);
-
-        int year = Integer.parseInt(firstMultipleInput[2]);
-
-        String res = Result.findDay(month, day, year);
-
-        bufferedWriter.write(res);
-        bufferedWriter.newLine();
-
-        bufferedReader.close();
-        bufferedWriter.close();
-    }
+   
 }
