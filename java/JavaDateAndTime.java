@@ -1,9 +1,5 @@
-import java.io.*;
 import java.util.*;
-
-
 class Result {
-
     /*
      * Complete the 'findDay' function below.
      *
@@ -22,7 +18,6 @@ class Result {
         cal.set(Calendar.YEAR, year);
         return cal.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.US).toUpperCase();
     }
-
 }
 public class JavaDateAndTime {
     public static void main(String[] args){
@@ -34,6 +29,5 @@ public class JavaDateAndTime {
 
         // findDay(month, date, year);
     } 
-
-   
+    sc.close();
 }
