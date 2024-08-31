@@ -28,6 +28,7 @@ public class JavaDateAndTime {
         int year = sc.nextInt();
 
         // findDay(month, date, year);
+        sc.close();
     } 
-    sc.close();
+    
 }
