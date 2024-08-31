@@ -27,8 +27,19 @@ public class JavaDateAndTime {
         int month = sc.nextInt();
         int year = sc.nextInt();
 
-        // findDay(month, date, year);
+        findDay(month, date, year);
         sc.close();
+    }
+
+    private static char[] findDay(int month, int date, int year) {
+        // TODO Auto-generated method stub
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.MONTH, month-1);
+        cal.set(Calendar.DAY_OF_MONTH, date);
+        cal.set(Calendar.YEAR, year);
+        cal.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.US).toUpperCase();
+        throw new UnsupportedOperationException("Unimplemented method 'findDay'");
+        
     } 
     
 }
