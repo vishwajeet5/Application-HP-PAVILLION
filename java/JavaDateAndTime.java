@@ -32,7 +32,7 @@ public class JavaDateAndTime {
     }
 
     private static char[] findDay(int month, int date, int year) {
-        // TODO Auto-generated method stub
+        
         Calendar cal = Calendar.getInstance();
         cal.set(Calendar.MONTH, month-1);
         cal.set(Calendar.DAY_OF_MONTH, date);
