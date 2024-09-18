@@ -1,7 +1,5 @@
 import java.util.*;
 
-
-
 public class binarySearchTree22 {
 
     public static int getHeight(Node root) {
