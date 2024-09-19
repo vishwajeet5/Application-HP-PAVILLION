@@ -37,10 +37,6 @@ class Pen {
 
 }
 
-class Student {
-
-}
-
 class BankAccount{
     public String username;
     @SuppressWarnings("unused")
