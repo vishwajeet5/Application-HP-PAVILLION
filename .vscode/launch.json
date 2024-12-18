@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Project",
+            "request": "launch",
+            "mainClass": "Project",
+            "projectName": "Application-HP-PAVILLION_9287d1bb"
+        },
+        {
+            "type": "java",
+            "name": "Splash",
+            "request": "launch",
+            "mainClass": "Splash",
+            "projectName": "Application-HP-PAVILLION_9287d1bb"
+        },
+        {
+            "type": "java",
+            "name": "Login",
+            "request": "launch",
+            "mainClass": "Login",
+            "projectName": "Application-HP-PAVILLION_9287d1bb"
+        },
+        {
+            "type": "java",
             "name": "javaBigDecimal",
             "request": "launch",
             "mainClass": "javaBigDecimal",

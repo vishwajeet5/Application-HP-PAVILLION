@@ -4,6 +4,7 @@ import java.io.*;
 
 public class RegExPatternsandtoDatabases28 {
     
+    @SuppressWarnings("unused")
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 

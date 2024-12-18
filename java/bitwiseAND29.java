@@ -7,7 +7,7 @@ public class bitwiseAND29 {
 
         int t = Integer.parseInt(bufferedReader.readLine().trim());
 
-        IntStream.range(0, t).forEach(tItr -> {
+        IntStream.range(0, t).forEach(_ -> {
             try {
                 String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
 
