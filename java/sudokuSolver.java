@@ -27,10 +27,13 @@ public class sudokuSolver{
     }
     public static boolean sudokuSolve(int [][] sudoku, int row, int col){
         // Base case
-        if(row == 9 || col == 9){
+        // if(row == 9 || col == 9){
+        //     return true;
+        // }else if(row == 9){
+        //     return false;
+        // }
+        if(row == 9 && col == 0){
             return true;
-        }else if(row == 9){
-            return false;
         }
         // Recursion
         int nextRow = row, nextCol = col + 1;
